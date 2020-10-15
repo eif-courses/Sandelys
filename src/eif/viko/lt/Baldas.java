@@ -1,8 +1,12 @@
 package eif.viko.lt;
 
+import java.io.Serializable;
 import java.util.Random;
 
-public class Baldas {
+public class Baldas implements Serializable {
+
+  private static final long serialVersionUID = 1L;
+
   private int id;
   private String pav;
   private Medziaga medziaga;
@@ -36,9 +40,9 @@ public class Baldas {
   @Override
   public String toString(){
     return
-        "id:" + id +
-        "Pavadinimas: " + pav +
-        "Medziaga: "+ medziaga.name();
+        "id: " + id +
+        " Pavadinimas: " + pav +
+        " Medziaga: "+ medziaga.name();
   }
 
 
